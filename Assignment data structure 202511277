@@ -1,0 +1,135 @@
+1. Program that takes the user’s name and says congratulations
+
+#include <iostream>
+using namespace std;
+
+void congratulate(string name)
+{
+    cout << "Congratulations " << name << "!" << endl;
+}
+
+int main()
+{
+    string userName;
+
+    cout << "Enter your name: ";
+    cin >> userName;
+
+    congratulate(userName);
+
+    return 0;
+}
+
+
+
+
+2. Function that adds 4 float numbers
+
+#include <iostream>
+using namespace std;
+
+float addNumbers(float a, float b, float c, float d)
+{
+    return a + b + c + d;
+}
+
+int main()
+{
+    float num1, num2, num3, num4;
+
+    cout << "Enter 4 float numbers: ";
+    cin >> num1 >> num2 >> num3 >> num4;
+
+    cout << "Sum = " << addNumbers(num1, num2, num3, num4);
+
+    return 0;
+}
+
+
+3. Function that computes Fibonacci series using recursion
+
+#include <iostream>
+using namespace std;
+
+int fibonacci(int n)
+{
+    if (n == 0)
+        return 0;
+    else if (n == 1)
+        return 1;
+    else
+        return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+int main()
+{
+    int n;
+
+    cout << "Enter number of terms: ";
+    cin >> n;
+
+    for (int i = 0; i < n; i++)
+    {
+        cout << fibonacci(i) << " ";
+    }
+
+    return 0;
+}
+
+
+
+
+5. Can a void function take a parameter?
+
+Yes. A void function can take parameters, but it does not return a value.
+
+Example:
+
+#include <iostream>
+using namespace std;
+
+void display(string name)
+{
+    cout << "Hello " << name;
+}
+
+int main()
+{
+    display("John");
+
+    return 0;
+}
+
+
+---
+
+6. What is a recursive algorithm? Give factorial example
+
+A recursive algorithm is a method where a function calls itself repeatedly until a stopping condition is met.
+
+Factorial Example:
+
+n! = n \times (n-1)!
+
+#include <iostream>
+using namespace std;
+
+int factorial(int n)
+{
+    if (n == 0 || n == 1)
+        return 1;
+    else
+        return n * factorial(n - 1);
+}
+
+int main()
+{
+    int num;
+
+    cout << "Enter a number: ";
+    cin >> num;
+
+    cout << "Factorial = " << factorial(num);
+
+    return 0;
+}
